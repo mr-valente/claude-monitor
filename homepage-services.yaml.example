@@ -1,0 +1,25 @@
+- AI:
+    - Claude Code:
+        description: Personal Claude Code quota
+        widget:
+          type: customapi
+          url: http://YOUR-HOMELAB-IP:8787/usage
+          refreshInterval: 30000
+          headers:
+            X-API-Token: "{{HOMEPAGE_VAR_CLAUDE_QUOTA_TOKEN}}"
+          display: list
+          mappings:
+            - field: five_hour.summary
+              label: 5 Hour
+              format: text
+            - field: seven_day.summary
+              label: Weekly
+              format: text
+            - field: fable.summary
+              label: Fable
+              format: text
+            - field: updated_at
+              label: Last Seen
+              format: relativeDate
+              style: short
+              numeric: auto

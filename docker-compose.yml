@@ -1,0 +1,16 @@
+services:
+  claude-quota-bridge:
+    build: .
+    container_name: claude-quota-bridge
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    environment:
+      QUOTA_TOKEN: ${QUOTA_TOKEN}
+      PORT: 8787
+      DATA_FILE: /data/quota.json
+    volumes:
+      - claude-quota-data:/data
+
+volumes:
+  claude-quota-data:

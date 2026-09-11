@@ -1,0 +1,8 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "python3 ~/.claude/push-quota.py",
+    "padding": 0,
+    "refreshInterval": 60
+  }
+}

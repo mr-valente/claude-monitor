@@ -1,0 +1,10 @@
+{
+  "url": "http://YOUR-HOMELAB-IP:8787/usage",
+  "token": "same-secret-as-QUOTA_TOKEN",
+  "push_interval_seconds": 60,
+  "timeout_seconds": 0.5,
+  "scoped_usage_enabled": true,
+  "scoped_usage_refresh_seconds": 300,
+  "scoped_usage_timeout_seconds": 60,
+  "claude_command": "claude"
+}
