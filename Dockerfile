@@ -15,4 +15,7 @@ RUN mkdir -p /data
 ENV PORT=8787 DATA_FILE=/data/quota.json
 EXPOSE 8787
 
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
+      CMD python -c "from urllib.request import urlopen; urlopen('http://127.0.0.1:8787/healthz', timeout=3).close()"
+
 CMD ["python", "/app/app.py"]
